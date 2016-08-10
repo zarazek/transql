@@ -8,9 +8,6 @@ import Text.Earley
 import Control.Applicative ((<|>), many, some, optional)
 import Data.Maybe (isJust, fromJust)
 
-token = symbol
-terminal f = (fromJust . f) <$> satisfy (isJust . f)
-
 leftParenT = token LeftParen
 rightParenT = token RightParen
 commaT = token Comma
